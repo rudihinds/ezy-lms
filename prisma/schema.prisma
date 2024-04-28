@@ -92,8 +92,7 @@ model MuxData {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
-  @@index([chapterId])
-
+  // @@index([chapterId])
 }
 
 model UserProgress {
@@ -122,7 +121,7 @@ model Purchase {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([userId])
+  // @@index([userId])
   @@index([courseId])
 }
 

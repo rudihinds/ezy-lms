@@ -91,7 +91,6 @@ const DescriptionForm = ({ initialData, courseId }: DescriptionFormProps) => {
                       {...field}
                       disabled={isSubmitting}
                       placeholder="e.g. This course will help you learn advanced web development concepts and build your first web application..."
-                      {...field}
                     />
                   </FormControl>
                   <FormMessage />

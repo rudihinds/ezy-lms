@@ -73,8 +73,8 @@ const ChaptersForm = ({ initialData, courseId }: ChaptersFormProps) => {
   };
 
   const onEdit = (id: string) => {
-    router.push(`teacher/courses/${courseId}/chapters/${id}`);
-  }
+    router.push(`/teacher/courses/${courseId}/chapters/${id}`);
+  };
 
   return (
     <div className="relative p-4 mt-6 border rounded-md bg-slate-100">
