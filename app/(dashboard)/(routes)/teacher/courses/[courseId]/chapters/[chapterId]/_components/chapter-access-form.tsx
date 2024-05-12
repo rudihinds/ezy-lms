@@ -32,6 +32,7 @@ const formSchema = z.object({
   isFree: z.boolean().default(false),
 });
 
+
 const ChapterAccessForm = ({
   initialData,
   courseId,

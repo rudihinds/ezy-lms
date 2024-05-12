@@ -8,6 +8,7 @@ import { IconBadge } from "@/components/icon-badge";
 import ChapterTitleForm from "@/app/(dashboard)/(routes)/teacher/courses/[courseId]/chapters/[chapterId]/_components/chapter-title-form";
 import ChapterDescriptionForm from "@/app/(dashboard)/(routes)/teacher/courses/[courseId]/chapters/[chapterId]/_components/chapter-description-form";
 import ChapterAccessForm from "@/app/(dashboard)/(routes)/teacher/courses/[courseId]/chapters/[chapterId]/_components/chapter-access-form";
+import ChapterVideoForm from "@/app/(dashboard)/(routes)/teacher/courses/[courseId]/chapters/[chapterId]/_components/chapter-video-form";
 
 export default async function ChapterIdPage({
   params,
@@ -97,6 +98,11 @@ export default async function ChapterIdPage({
             <IconBadge icon={Video} />
             <h2 className="text-xl">Add a video</h2>
           </div>
+          <ChapterVideoForm
+            initialData={chapter}
+            courseId={params.courseId}
+            chapterId={params.chapterId}
+          />
         </div>
       </div>
     </div>
