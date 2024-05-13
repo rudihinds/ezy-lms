@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import { Chapter, MuxData } from "@prisma/client";
 import Image from "next/image";
 import { FileUpload } from "@/components/file-upload";
+import MuxPlayer from "@mux/mux-player-react";
 
 interface ChapterVideoFormProps {
   initialData: Chapter & { muxData?: MuxData | null };
@@ -70,7 +71,9 @@ const ChapterVideoForm = ({
             <VideoIcon className="w-10 h-10 text-slate-500" />
           </div>
         ) : (
-          <div className="relative mt-2 aspect-video ">Video Uploaded</div>
+          <div className="relative mt-2 aspect-video">
+            <MuxPlayer playbackId={initialData?.muxData?.playbackId || ""} />
+          </div>
         ))}
       {isEditing && (
         <div>
